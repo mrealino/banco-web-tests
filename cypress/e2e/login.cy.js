@@ -24,6 +24,7 @@ describe('Login', () => {
     cy.get('#username').click().type('julio.lima')
     cy.get('#senha').click().type('654321')
     cy.contains('button', 'Entrar').click()
+    cy.screenshot('tela após acesso')
 
     // Assert
     cy.get('.toast').should('be.visible')
